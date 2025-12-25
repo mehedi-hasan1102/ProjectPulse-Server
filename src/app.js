@@ -1,12 +1,16 @@
+
+
+require('dotenv').config();
 const express = require('express');
+const connectDB = require('./config/db');
+
 const app = express();
 
-// middlewares
+connectDB();
 app.use(express.json());
 
-// health check
 app.get('/', (req, res) => {
-  res.json({ message: 'ProjectPulse API running' });
+  res.send('ProjectPulse API running');
 });
 
 module.exports = app;
