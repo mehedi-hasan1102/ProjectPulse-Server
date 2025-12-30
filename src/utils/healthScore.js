@@ -1,8 +1,8 @@
 module.exports = function calculateHealth({
-  clientRating,
-  employeeConfidence,
-  progress,
-  openRisks
+  clientRating = 5,
+  employeeConfidence = 5,
+  progress = 0,
+  openRisks = 0
 }) {
   let score = 100;
 

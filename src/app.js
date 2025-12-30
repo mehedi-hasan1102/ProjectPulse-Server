@@ -24,7 +24,7 @@ app.use('/api/risks', riskRoutes);
 
 // TEST ROUTE
 app.get('/', (req, res) => {
-  res.send('ProjectPulse API running');
+  res.send('Project Pulse API running');
 });
 
 module.exports = app;
