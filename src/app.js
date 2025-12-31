@@ -14,7 +14,7 @@ app.use(express.json());
 
 // ===== ENABLE CORS =====
 app.use(cors({
-  origin: 'http://localhost:3000', // your frontend URL
+  origin: 'project-pulse-client-six.vercel.app', // your frontend URL
   credentials: true,               // allows cookies/auth headers if needed
 }));
 
