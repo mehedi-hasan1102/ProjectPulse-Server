@@ -1,5 +1,8 @@
+
+
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors'); // <--- import cors
 const connectDB = require('./config/db');
 
 // INIT APP FIRST
@@ -8,6 +11,12 @@ const app = express();
 // DB & MIDDLEWARE
 connectDB();
 app.use(express.json());
+
+// ===== ENABLE CORS =====
+app.use(cors({
+  origin: 'http://localhost:3000', // your frontend URL
+  credentials: true,               // allows cookies/auth headers if needed
+}));
 
 // ROUTES
 const authRoutes = require('./routes/auth.routes');
